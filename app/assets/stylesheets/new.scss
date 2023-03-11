@@ -1,0 +1,23 @@
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .checkbox-group, .diet-box, .cuisine-box, .ingredients-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px
+  }
+
+  .ingredient-inputs {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 25px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.bouton{
+  cursor:pointer
+}

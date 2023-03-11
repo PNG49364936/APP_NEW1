@@ -1,0 +1,45 @@
+#notice{
+    color: red;
+    font-weight: bold;
+    }
+    
+    .receipt{
+        border: 1px solid gray;
+        font-weight: bold;
+        background-color: lightgray;
+        padding: 5px;
+    }
+    
+    .bouton{
+        cursor:pointer;
+        padding-bottom: 15px;
+     
+        
+    }
+    .btn-margin{
+        margin-right:7px
+    }
+    .show{
+        border: 4mm ridge rgba(211, 220, 50, .6);
+    }
+    .rounded-box{
+        border-radius: 20px;
+        border: 3px solid black;
+        text-indent: 10px;
+        text-transform: capitalize;
+        width: 125px;
+        background-color: aqua;
+       
+    }
+    .rounded-number-box{
+        border-radius: 20px;
+        border: 3px solid black;
+        text-indent: 10px;
+        width: 80px;
+    }
+    
+    .container{
+        background-color: rgb(231, 221, 221);
+    }
+    
+    

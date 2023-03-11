@@ -1,0 +1,29 @@
+@import "bootstrap/scss/bootstrap";
+@import "new";
+@import "index";
+@import "show";
+@import "home";
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+body{
+   height: 100vh;
+    text-rendering: optimizeSpeed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: center; 
+    background-color: grayscale($color: #a59f9f);
+}
+

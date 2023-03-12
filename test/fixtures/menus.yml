@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type_of_menu: MyString
+  preparation_time: 1
+  ingredient1: MyString
+  ingredient2: MyString
+  ingredient3: MyString
+  ingredient4: MyString
+  ingredient5: MyString
+  ingredient6: MyString
+  type_of_diet: MyString
+  type_of_cuisine: MyString
+  guests: 1
+  list_of_ingredients_with_quantity: MyString
+
+two:
+  name: MyString
+  type_of_menu: MyString
+  preparation_time: 1
+  ingredient1: MyString
+  ingredient2: MyString
+  ingredient3: MyString
+  ingredient4: MyString
+  ingredient5: MyString
+  ingredient6: MyString
+  type_of_diet: MyString
+  type_of_cuisine: MyString
+  guests: 1
+  list_of_ingredients_with_quantity: MyString

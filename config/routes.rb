@@ -3,8 +3,9 @@ Rails.application.routes.draw do
         resources :menus do
           #get 'answer', to: 'menus#answer', as:'answer'
         resources :receipts, only: [:new, :create, :edit]
-          member do
-            post 'print'
+        member do
+          post 'print', to: 'menus#print'
+          get 'print', to: 'menus#print', format: :js
         end
         #get 'print', to: 'menus#print', as: 'print_menu'
   

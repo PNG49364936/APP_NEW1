@@ -178,17 +178,35 @@ class MenusController < ApplicationController
 
     def print
       @menu = Menu.find(params[:id])
-      pp"2"*100
+      pp"1"*100
       html_text = @menu.receipt.content.gsub(/\n/, "<br class='my-class'>")
-      pp"3"*100
+      pp"2"*100
       html_text = html_text.gsub(/(^\w+:)/, '<strong>\1</strong>')
-      pp"4"*100
+      pp"3"*100
       respond_to do |format|
-        pp"6"*100
+        pp"4"*100
         format.html { render html: html_text.html_safe }
-        pp"7"*100
+        pp"5"*100
+        format.print { 
+          pp"6"*100
+          render plain: html_text, 
+          layout: false, 
+          content_type: 'text/plain', 
+          charset: 'utf-8', 
+          status: :ok,
+          headers: {
+            'Content-Disposition' => 'attachment; filename="menu.txt"',
+            'X-Content-Type-Options' => 'nosniff',
+            'X-Download-Options' => 'noopen',
+            'X-Frame-Options' => 'SAMEORIGIN',
+            'X-XSS-Protection' => '1; mode=block',
+            'Content-Security-Policy' => "default-src 'self'; font-src 'https://fonts.gstatic.com'; img-src 'self' data:; object-src 'none'; script-src 'unsafe-inline' 'self'; style-src 'self' 'unsafe-inline' 'https://fonts.googleapis.com'"
+          },
+          js: "window.print();"
+        }
       end
     end
+
 
     private
     def params_menu

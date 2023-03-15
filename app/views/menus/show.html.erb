@@ -10,102 +10,13 @@
                                     <%=  f.text_field :name, class:"rounded-box", readonly: true%>
                                 </div>
                                 <br>
-                                <div>
-                                    <h5><strong>Ingrédient à exclure.  </strong> </h5>
-                                </div>
-            
-                                <div class="col-3 ingredient-inputs">
-                                        <div>
-                                            <%=  f.label :ingredient1, 'Ingredient 1'%>
-                                            <%=  f.text_field :ingredient1,class:"rounded-box",readonly: true %>
-                                        </div>
-                                        <div>
-                                            <%=  f.label :ingredient2, 'Ingredient 2'%>
-                                            <%=  f.text_field :ingredient2,class:"rounded-box",readonly: true%>
-                                        </div>
-                                        <div>
-                                            <%=  f.label :ingredient3, 'Ingredient 3'%>
-                                            <%=  f.text_field :ingredient3, class:"rounded-box",readonly: true%>
-                                        </div>              
-                                </div>
-                                <br> 
-
-                                <div>
-                                    <h5><strong>Ingredients à utiliser.</strong> </h5>
-                                </div>
-            
-                                <div class="col-3 ingredient-inputs">
-                                        <div>
-                                            <%=  f.label :ingredient4, 'Ingredient 1'%>
-                                            <%=  f.text_field :ingredient4, class:"rounded-box",readonly: true%>
-                                        </div>
-                                        <div>
-                                            <%=  f.label :ingredient5, 'Ingredient 2'%>
-                                            <%=  f.text_field :ingredient5, class:"rounded-box",readonly: true%>
-                                        </div>
-                                        <div>
-                                            <%=  f.label :ingredient6, 'Ingredient 3'%>
-                                            <%=  f.text_field :ingredient6, class:"rounded-box",readonly: true%>
-                                        </div>              
-                                </div>
-                                <br>
-                    
-
-                                 <div class="col-9">
-                                                    <div class="checkbox-group" data-controller="box" data-target="box.output">
-                                                        <%= f.label :type_of_menu do %>
-                                                        <%= content_tag :strong, "Menus culturels:" %>
-                                                        <% end %>
-                                                        <%= f.collection_radio_buttons :type_of_menu, ['Normal','Moslim', 'Kosher'], :to_s, :to_s, { name: 'menu_group' },readonly: true %>
-                                                    </div>  
-                                    </div>
-
-                                    <br>
-
-                                <div class="col-9">
-                                    <div class="diet-box" data-controller="diet" data-target="diet.output">
-                                        <%= f.label :type_of_diet do %>
-                                        <%= content_tag :strong, "Regimes spécifiques:" %>
-                                        <% end %>
-                                        <%= f.collection_radio_buttons :type_of_diet, ['Normal','Vegetarian', 'Vegtalian', 'Vegan', "Flexitarian", "No colesterol", "no salt", "hypocaloric"], :to_s, :to_s,{ name: 'diet_group' } %>
-                                    </div>  
-                                </div>
-                                      <br>
-
-                                <div class="col-9">
-                                        <div class="cuisine-box" data-controller="cuisine" data-target="cuisine.output">
-                                            <%= f.label :type_of_cuisine do %>
-                                            <%= content_tag :strong, "Types de gastronomie:" %>
-                                            <% end %>
-                                            <%= f.collection_radio_buttons :type_of_cuisine, ['Normal','French', 'Italian', 'Spanish', "Indou", "Chinese", "Japanese", "Mexican", "USA"], :to_s, :to_s,{ name: 'cuisine_group' } %>
-                                        </div>  
-                                </div>
-                                <br>
-
-                                <div class="col-9">
-                                    <div class="ingredients-box" >
-                                        <%= f.label :list_of_ingredients_with_quantity do %>
-                                        <%= content_tag :strong, "Liste des ingredients:" %>
-                                        <% end %>
-                                        <%= f.collection_radio_buttons :list_of_ingredients_with_quantity, ['Yes','No'], :to_s, :to_s,{ name: 'ingredients_group' }%>
-
-                                </div>  
-
-                                <br>
-
-                                <div class="col-4">
-                                    <%=  f.label :preparation_time, 'Temps de préparation (minutes)', class:'bold'%>
-                                    <%= f.number_field :preparation_time, in: [15, 30, 45, 60, 75, 90],step:15, class: 'rounded-number-box',size: 130 %>
-                                </div>
-                                    <br>
-                                <div class="col-4">
-                                <%= f.label :guests, content_tag(:strong, "Nombre d'invités:") %>
-                                <%= f.select :guests, (1..12).to_a, prompt: "Choisir"%>
-                               </div>
-                               <br><br>
-            <% end %>
-        </div>
-        <hr /> 
+                                
+                              <div> 
+                              <%=render "shared/base",f: f%> 
+                              </div> 
+         <% end %>
+     </div>
+   
                                 <div data-controller="recipe" >
                                    <div id="receipt-content">
                                     <h3  data-action="click->recipe#toggleRecipe">Votre menu , en cliquant ici.</h3>

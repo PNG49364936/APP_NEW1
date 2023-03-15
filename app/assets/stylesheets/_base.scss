@@ -1,0 +1,38 @@
+.bouton{
+    padding-bottom: 15px;
+    cursor:pointer
+}
+
+.btn-margin{
+    margin-right:7px
+}
+
+
+.container{
+    background-color: rgb(143, 139, 139);
+}
+
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+.rounded-box{
+    text-indent: 10px;
+    text-transform: capitalize;
+    color: black;
+    width: 125px;
+}
+
+.rounded-number-box{
+    text-indent: 10px;
+    width: 80px;
+}
+
+.show{
+    border: 4mm ridge rgba(211, 220, 50, .6);
+}
+
+.submit{
+    padding-bottom: 15px;
+    gap: 10px;
+}

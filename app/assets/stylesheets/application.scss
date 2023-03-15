@@ -3,7 +3,10 @@
 @import "index";
 @import "show";
 @import "home";
-
+@import "edit";
+@import "base";
+@import "font-awesome";
+$spacer:8px;
 
 
 
@@ -13,17 +16,18 @@
     cursor: pointer;
 }
 
-html:focus-within{
-    scroll-behavior: smooth;
-}
-
 body{
-   height: 100vh;
+   height: 80vh;
     text-rendering: optimizeSpeed;
     margin: 0;
     padding: 0;
     width: 100%;
     justify-content: center; 
-    background-color: grayscale($color: #a59f9f);
+    //background-color: grayscale($color: #a59f9f);
+    background-image:url(CUISINE.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+  background-position: center center;
+   
 }
 

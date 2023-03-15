@@ -1,31 +1,25 @@
-.menu{
-    line-height: normal;
-    border: 1px solid gray;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: lightgray;
-   
-}
+.btn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 15px;
+    padding-bottom: 15px;
+  }
 
-#notice{
-    color: red;
-    font-weight: bold;
-    }
-
-.index-header{
-    height: 160px;
-    background-color: dimgrey;
-    place-items: center;
+.colora{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
 }
 
 .first{
     padding-top: 0px;
 }
 
-.second{
-    color: white;
-    padding-top: 50px;
-}
+.index {
+    margin-top: 180px;
+   }
 
 .index-header {
     position: fixed;
@@ -34,25 +28,17 @@
     right: 0;
     z-index: 1;
     padding: 20px 0;
-  }
+    height: 160px;
+    background-color: dimgrey;
+    place-items: center;
+  } 
 
-  .index {
-   margin-top: 180px;
-  }
-
-  .btn2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    gap: 15px;
-    padding-top: 15px;
-  }
-
-  .navbar{
-    width: 100%;
-    height: 5px;
-    justify-content: left;
+.menu{
+    line-height: normal;
+    border: 1px solid gray;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: lightgray;
 }
 
 nav{
@@ -62,14 +48,25 @@ nav{
     align-items: center;
 }
 
+.navbar{
+    width: 100%;
+    height: 5px;
+    justify-content: left;
+}
+
+#notice{
+    color: red;
+    font-weight: bold;
+    }
+
+.second{
+    color: white;
+    padding-top: 50px;
+}
+
 ul{
     display: flex;
     list-style: none;
     gap: 10px;
 }
 
-.colora{
-    color: white;
-    font-weight: bolder;
-    text-decoration: none;
-}

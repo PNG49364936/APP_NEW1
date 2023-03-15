@@ -1,0 +1,88 @@
+<div>
+    <h5><strong>Ingrédient à exclure</strong><span>&#128545</span> </h5>
+</div>
+
+<div class="col-3 ingredient-inputs">
+        <div>
+            <%=  f.label :ingredient1, 'Ingredient 1'%>
+            <%=  f.text_field :ingredient1,class:"rounded-box" %>
+        </div>
+        <div>
+            <%=  f.label :ingredient2, 'Ingredient 2'%>
+            <%=  f.text_field :ingredient2,class:"rounded-box"%>
+        </div>
+        <div>
+            <%=  f.label :ingredient3, 'Ingredient 3'%>
+            <%=  f.text_field :ingredient3, class:"rounded-box"%>
+        </div>              
+</div>
+<br> 
+
+<div>
+    <h5><strong>Ingredients à utiliser</strong><span>&#128525</span> </h5>
+</div>
+
+<div class="col-3 ingredient-inputs">
+        <div>
+            <%=  f.label :ingredient4, 'Ingredient 1'%>
+            <%=  f.text_field :ingredient4, class:"rounded-box"%>
+        </div>
+        <div>
+            <%=  f.label :ingredient5, 'Ingredient 2'%>
+            <%=  f.text_field :ingredient5, class:"rounded-box"%>
+        </div>
+        <div>
+            <%=  f.label :ingredient6, 'Ingredient 3'%>
+            <%=  f.text_field :ingredient6, class:"rounded-box"%>
+        </div>              
+</div>
+<br>
+
+
+
+
+<div class="col-3">
+<div class="form-group">
+<%= f.label :type_of_menu, content_tag(:strong, "Menus culturels:"), class: "font-weight-bold" %>
+<%= f.select :type_of_menu, ['Non', 'Kosher', 'Musulman'], { include_blank: "Choisir" }, { readonly: true} %>
+</div>
+</div>
+
+<br>
+
+<div class="col-3">
+<div class="form-group">
+<%= f.label :type_of_diet, content_tag(:strong, "Régimes spécifiques:"), class: "font-weight-bold" %>
+<%= f.select :type_of_diet, ['Sans','Vegetarian', 'Vegtalian', 'Vegan', "Flexitarian", "No colesterol", "no salt", "hypocaloric"],{ include_blank: "Choisir" }, { readonly: true}  %>
+
+</div>
+</div>
+
+<br>
+
+<div class="col-3">
+<div class="form-group">
+<%= f.label :type_of_cuisine, content_tag(:strong, "Choix de gastronomie:"), class: "font-weight-bold" %>
+<%= f.select :type_of_cuisine, ['French', 'Italian', 'Spanish', "Indou", "Chinese", "Japanese", "Mexican", "USA"],{ include_blank: "Choisir" }, { readonly: true}  %>
+
+</div>
+</div>
+
+<br>
+
+<div class="col-9">
+<div class="ingredients-box" >
+<%= content_tag :strong, "Liste des ingredients:" %>
+<%= f.collection_radio_buttons :list_of_ingredients_with_quantity, ['Yes','No'], :to_s, :to_s,  checked: 'Yes' %>
+</div>  
+</div>
+<br>
+
+<div class="col-3">
+    <%=  f.label :preparation_time, 'Temps de préparation (minutes)', class:'bold'%>
+    <%= f.number_field :preparation_time, in: [15, 30, 45, 60, 75, 90],step:15, class: 'rounded-number-box',size: 130 %>
+</div>
+<br>
+<%= f.label :guests, content_tag(:strong, "Nombre d'invités:") %>
+<%= f.select :guests, (1..12).to_a, prompt: "Choisir"%>
+<br><br>

@@ -7,6 +7,8 @@ gem "ruby-openai"
 gem "dotenv-rails"
 gem 'httparty'
 gem "byebug"
+gem "autoprefixer-rails"
+gem "font-awesome-sass"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'

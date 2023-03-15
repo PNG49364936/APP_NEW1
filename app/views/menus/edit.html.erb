@@ -7,99 +7,14 @@
             <%=  f.text_field :name, class:"rounded-box"%>
         </div>
         <br>
-                <div>
-                    <h5><strong>Ingredients to exclude</strong> </h5>
-                </div>
-   
-                <div class="col-3 ingredient-inputs">
-                        <div>
-                            <%=  f.label :ingredient1, 'Ingredient'%>
-                            <%=  f.text_field :ingredient1,class:"rounded-box" %>
-                        </div>
-                        <div>
-                            <%=  f.label :ingredient2, 'Ingredient'%>
-                            <%=  f.text_field :ingredient2,class:"rounded-box"%>
-                        </div>
-                        <div>
-                            <%=  f.label :ingredient3, 'Ingredient'%>
-                            <%=  f.text_field :ingredient3, class:"rounded-box"%>
-                        </div>              
-                </div>
-                <br> 
-   
-                <div>
-                    <h5><strong>Ingredients to include</strong> </h5>
-                </div>
-   
-                <div class="col-3 ingredient-inputs">
-                        <div>
-                            <%=  f.label :ingredient4, 'Ingredient'%>
-                            <%=  f.text_field :ingredient4, class:"rounded-box"%>
-                        </div>
-                        <div>
-                            <%=  f.label :ingredient5, 'Ingredient'%>
-                            <%=  f.text_field :ingredient5, class:"rounded-box"%>
-                        </div>
-                        <div>
-                            <%=  f.label :ingredient6, 'Ingredient'%>
-                            <%=  f.text_field :ingredient6, class:"rounded-box"%>
-                        </div>              
-                </div>
-                <br>
-                
-   
-        <div class="col-9">
-                <div class="checkbox-group" data-controller="box" data-target="box.output">
-                    <%= f.label :type_of_menu do %>
-                    <%= content_tag :strong, "Select a type of menu:" %>
-                    <% end %>
-                    <%= f.collection_radio_buttons :type_of_menu, ['Normal','Moslim', 'Kosher'], :to_s, :to_s, { name: 'menu_group' } %>
-                </div>  
+
+        <div>
+        <%=render "shared/base",f: f%> 
         </div>
-   
-        <br>
-   
-        <div class="col-9">
-            <div class="diet-box" data-controller="diet" data-target="diet.output">
-                <%= f.label :type_of_diet do %>
-                <%= content_tag :strong, "Select a specific diet:" %>
-                <% end %>
-                <%= f.collection_radio_buttons :type_of_diet, ['Normal','Vegetarian', 'Vegtalian', 'Vegan', "Flexitarian", "No colesterol", "no salt", "hypocaloric"], :to_s, :to_s,{ name: 'diet_group' } %>
-            </div>  
-      </div>
-      <br>
-   
-      <div class="col-9">
-            <div class="cuisine-box" data-controller="cuisine" data-target="cuisine.output">
-                <%= f.label :type_of_cuisine do %>
-                <%= content_tag :strong, "Select specific Cuisine:" %>
-                <% end %>
-                <%= f.collection_radio_buttons :type_of_cuisine, ['Normal','French', 'Italian', 'Spanish', "Indou", "Chinese", "Japanese", "Mexican", "USA"], :to_s, :to_s,{ name: 'cuisine_group' } %>
-            </div>  
-       </div>
-        <br>
-   
-        <div class="col-9">
-            <div class="ingredients-box" >
-                <%= f.label :list_of_ingredients_with_quantity do %>
-                <%= content_tag :strong, "List of ingredients:" %>
-                <% end %>
-                <%= f.collection_radio_buttons :list_of_ingredients_with_quantity, ['Yes','No'], :to_s, :to_s,{ name: 'ingredients_group' }%>
-            </div>  
-       </div>
-          <br>
-   
-                <div class="col-2">
-                    <%=  f.label :preparation_time, 'Preparation time (minutes)', class:'bold'%>
-                    <%= f.number_field :preparation_time, in: [15, 30, 45, 60, 75, 90],step:15, class: 'rounded-number-box',size: 130 %>
-                </div>
-        <br>
-        <%= f.label :guests, content_tag(:strong, "Number of guests:") %>
-         <%= f.select :guests, (1..12).to_a, prompt: "Select a number"%>
-            <br><br>
-            <div class="submit">
-            <%= f.submit "Valider mise à jour", class: "btn btn-primary" %>
-            <%=link_to "cancel", menus_path, class: "btn btn-danger"%>
+
+            <div class="submit mt-3">
+            <%= f.submit "Valider mise à jour", class: "btn btn-primary btn-margin" %>
+            <%=link_to "cancel", menus_path, class: "btn btn-danger btn-margin"%>
             </div>
         <% end %>
         

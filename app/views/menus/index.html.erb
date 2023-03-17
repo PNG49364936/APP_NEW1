@@ -10,14 +10,14 @@
                     </nav>
                 </div>
     
-            <div class="container col-3 ">
+            <div class="container col-2 search1 ">
                 <div class="text-center first ">
                     <%= form_tag menus_path, method: :get do %>
                             <%= text_field_tag :query, 
                             params[:query], 
                             class: "form_control",
                             place_holder: "find a menu"%>
-                            <%= submit_tag "search", class: "btn btn-primary"%>
+                            <%= submit_tag "search", class: "btn btn-primary btn-sm search"%>
                     <%end%> 
                 </div>
     
@@ -43,7 +43,7 @@
             </div>
     
             
-     </div>
+        </div>
     
     </div>
     

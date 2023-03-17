@@ -8,7 +8,7 @@
   }
 
 .colora{
-    color: white;
+    color:black;
     font-weight: bolder;
     text-decoration: none;
 }
@@ -19,6 +19,7 @@
 
 .index {
     margin-top: 180px;
+
    }
 
 .index-header {
@@ -29,8 +30,9 @@
     z-index: 1;
     padding: 20px 0;
     height: 160px;
-    background-color: dimgrey;
+  
     place-items: center;
+
   } 
 
 .menu{
@@ -60,7 +62,7 @@ nav{
     }
 
 .second{
-    color: white;
+    color: black;
     padding-top: 50px;
 }
 
@@ -69,4 +71,11 @@ ul{
     list-style: none;
     gap: 10px;
 }
+
+.search1{
+    background-color:transparent!important;
+}
+
+
+
 

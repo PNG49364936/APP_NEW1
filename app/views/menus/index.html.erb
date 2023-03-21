@@ -10,7 +10,7 @@
                     </nav>
                 </div>
     
-            <div class="container col-2 search1 ">
+            <div class="container col-3 search1 ">
                 <div class="text-center first ">
                     <%= form_tag menus_path, method: :get do %>
                             <%= text_field_tag :query, 
@@ -21,7 +21,7 @@
                     <%end%> 
                 </div>
     
-            </div>
+        </div>
         <p class="text-center second"><strong>You can retrieve a menu based on its name or ingredients.</strong></p>
     </header>
     
@@ -31,10 +31,10 @@
          <br>
          <h1><% @menus.each do |menu| %></h1>
                 <div class="menu">
-                        <p>La reférence du menu est <strong><%= link_to menu.name, menu_path(menu) %></strong>, the type of menu is <strong><%= menu.type_of_menu %></strong>, the ingredients to exclude are <strong><%=menu.ingredient1.downcase%></strong>, <strong><%=menu.ingredient2.downcase%></strong>, <strong><%=menu.ingredient3.downcase%></strong>, the ingredients to include are <strong><%=menu.ingredient4.downcase%></strong>, <strong><%=menu.ingredient5.downcase%></strong>, <strong><%=menu.ingredient6.downcase%></strong>.</p>
-                        <p>The type of cuisine is <strong><%= menu.type_of_cuisine %></strong>, for <strong><%= menu.guests%> guests.</strong></p>
-                        <p>List of ingredients to be sent with receipts: <strong><%= menu.list_of_ingredients_with_quantity %></strong>, Cooking time should no be more than <strong><%= menu.preparation_time %> minutes.</strong> </p>
-                        <p>The "menu" will include a <strong>starter</strong>, <strong>main course</strong> and <strong>dessert</strong></p>
+                        <p>La reférence du menu est <strong><%= link_to menu.name, menu_path(menu) %></strong>, menu culturel: <strong><%= menu.type_of_menu %></strong>, les ingrédients à exclure sont: <strong><%=menu.ingredient1.downcase%></strong>, <strong><%=menu.ingredient2.downcase%></strong>, <strong><%=menu.ingredient3.downcase%></strong>, le menu doit inclure les ingédients suivants: <strong><%=menu.ingredient4.downcase%></strong>, <strong><%=menu.ingredient5.downcase%></strong>, <strong><%=menu.ingredient6.downcase%></strong>.</p>
+                        <p>Le type de gastronomie souhaitée est: <strong><%= menu.type_of_cuisine %></strong>, pour <strong><%= menu.guests%> convives.</strong></p>
+                        <p>La liste des ingrésients doit être fournie?: <strong><%= menu.list_of_ingredients_with_quantity %></strong>, Le temps de préparation ne doit pas être vsupérieur à : <strong><%= menu.preparation_time %> minutes.</strong> </p>
+                        <p>Le menu sera composé de : <strong>starter</strong>, <strong>main course</strong> and <strong>dessert</strong></p>
                 </div>   
           <% end %>
             <div class="btn2">

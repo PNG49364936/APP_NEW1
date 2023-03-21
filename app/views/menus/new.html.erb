@@ -6,7 +6,7 @@
         <%= simple_form_for(@menu) do |f| %>
 
             <div class="col-2">
-                <%=  f.label :name, 'Votre référence'%>
+                <%=  f.label :name,content_tag(:strong, 'Ta référence.') %>
                 <%=  f.text_field :name, class:"rounded-box"%>
             </div>
             <br>

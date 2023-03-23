@@ -26,8 +26,9 @@ body{
     background-image:url(CUISINE.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+    background-position: center center;
+    background-attachment: fixed;
+    object-fit: cover;
    
 }
 

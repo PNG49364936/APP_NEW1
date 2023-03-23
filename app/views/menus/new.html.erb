@@ -10,13 +10,25 @@
                 <%=  f.text_field :name, class:"rounded-box"%>
             </div>
             <br>
+
+            <div id="progressbar">
+                <span id="loading"></span>
+                <div id="load">loading</div>
+              </div>
+       
                     
                     <div>
                       <%=render "shared/base",f: f%>   
-                    </div>   
+                    </div>
+                    
+                   
+
+
+
             <div class="submit">
-                <%= f.submit "Enregistrer", class: "btn btn-primary" %>
-            <%=link_to "Liste", menus_path, class: "btn btn-danger"%>
+                <%= f.submit "Enregistrer", id:"progress", class: "btn btn-primary btn-margin",data:{controller:"loading"}  %>
+                <%=link_to "Liste", menus_path, class: "btn btn-primary btn-margin"%>
+                <%=link_to "Home", root_path, class: "btn btn-primary btn-margin"%>
             </div>
          <% end %>
     </div>

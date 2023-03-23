@@ -46,7 +46,7 @@ class MenusController < ApplicationController
               Preciser le temps de preparation des recettes pour entree, plat principal et dessert
               "
               #@text = text
-              client = OpenAI::Client.new(access_token: "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")
+              client = OpenAI::Client.new(access_token: ENV['API_KEY'])
               pp "A"*100, text
                   response = client.completions(
                   parameters: {
@@ -130,8 +130,8 @@ class MenusController < ApplicationController
       Preciser le temps de preparation des recettes pour entree, plat principal et dessert
       "
       pp"E"*100, text
-      #client = OpenAI::Client.new(access_token: ENV['API_KEY'])
-      client = OpenAI::Client.new(access_token: "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")
+      client = OpenAI::Client.new(access_token: ENV['API_KEY'])
+      #client = OpenAI::Client.new(access_token: "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")
                   response = client.completions(
                   parameters: {
                   model: "text-davinci-003",

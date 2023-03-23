@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" >
     <header>
        <div class="index-header" >
                 <div class="navbar" >
@@ -25,7 +25,7 @@
         <p class="text-center second"><strong>You can retrieve a menu based on its name or ingredients.</strong></p>
     </header>
     
-       <div class=" index ">
+       <div class=" index " data-controller = "function" data-action = "scroll->function#function">
          <p id="notice"><%=notice%></p>
        
          <br>
@@ -44,6 +44,13 @@
     
             
         </div>
+        <script>
+            window.addEventListener("scroll", function(){
+              console.log("test22")
+              var header = document.querySelector(".index-header");
+              header.classList.toggle("scroll-header", window.scrollY > 0);
+            });
+          </script>
     
     </div>
     

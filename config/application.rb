@@ -1,19 +1,17 @@
-require_relative 'boot'
+require_relative "boot"
 
-require 'rails/all'
+require "rails/all"
 
-# Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module AppNew1
+module APP_new1
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
+    # ... d'autres configurations ...
+
+    config.secret_key_base = ENV["714b38001c0632be187099c2accd3cfa7f2bad2494500065b5ce8b504930eb5657de6edb8bc1a7115d263275aa19398d325cf69659330aa2c902d86d93822e6a"] # ajouter cette ligne ici
+
+    # ... d'autres configurations ...
   end
 end

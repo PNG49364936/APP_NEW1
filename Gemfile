@@ -6,9 +6,10 @@ gem "simple_form"
 gem "ruby-openai"
 gem "dotenv-rails"
 gem 'httparty'
-gem "byebug"
+
 gem "autoprefixer-rails"
 gem "font-awesome-sass"
+gem "devise"
 
 
 

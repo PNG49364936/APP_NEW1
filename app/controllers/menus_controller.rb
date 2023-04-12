@@ -87,12 +87,8 @@ class MenusController < ApplicationController
     end
 
     def create
-      #pp "a" * 100
       @menu = Menu.new(params_menu)
         if @menu.save
-          #pp "b" * 100
-
-     
         redirect_to menus_answer_path
           else
         render 'new'

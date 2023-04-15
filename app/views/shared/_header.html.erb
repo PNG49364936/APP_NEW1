@@ -1,0 +1,33 @@
+<header class="home-header">
+       
+    <div class="navbar" >
+        <nav>
+            <ul>
+                <li><%=link_to "Mes menus", menus_path, class:"color"%></li>
+                <li><%=link_to "Créer un menu", new_menu_path, class:"color"%></li>
+            </ul>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Mon espace.
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <% if user_signed_in? %>
+                      <li class="nav-item"><%= link_to"Se déconnecter.",destroy_user_session_path, method: :delete %></li>
+                      <li class="nav-item"><%= link_to"Changer password.",edit_user_registration_path %></li>
+                    <% else %>
+                    
+                     <li class="nav-item"><%= link_to"Se connecter.", new_user_session_path %></li>
+                     <li class="nav-item"><%= link_to"S'inscrire.",new_user_registration_path %></li>
+                  <% end %>
+                </div>
+              </div>
+        </nav>
+    </div>
+     <h1>Pas d'idée pour ton menu, je suis là.</h1>
+
+     <marquee class="marquee" direction="up">Bonne dégustation.</marquee>
+
+     
+    
+</header>
+

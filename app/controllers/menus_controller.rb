@@ -1,6 +1,9 @@
 class MenusController < ApplicationController
+  skip_before_action :authenticate_user!, only: :home
     def home
     end
+
+  
 
     def stock 
               "Merci proposer un menu GASTRONOMIQUE basé OBLIGATOIREMENT sur une entrée, un plat principal et dessert.

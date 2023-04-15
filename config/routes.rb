@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: "menus#home"
+
+   
         resources :menus do
           #get 'answer', to: 'menus#answer', as:'answer'
         resources :receipts, only: [:new, :create, :edit]

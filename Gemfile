@@ -9,7 +9,9 @@ gem 'httparty'
 
 gem "autoprefixer-rails"
 gem "font-awesome-sass"
-gem "devise"
+gem "devise", '~> 4.9.1'
+
+
 
 
 
